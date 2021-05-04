@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Form Example 1</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+  <form name="mainFrom" onsubmit="return false">
+
+    <fieldset id="input">
+      <legend>Please rate your movies</legend>
+
+      <label for="movieName">Name of movie:</label>
+      <input name="movieName" id="movieName" type="text" />
+      <br><br>
+
+      <label for="rating">Rating (1-5):</label>
+      <input name="rating" id="rating" type="number" />
+      <br><br>
+
+      <input type="submit" value="Add Movie" onclick="formSubmitEvent()">
+      <input type="button" value="Show Movies" onclick="showEntries()">
+
+    </fieldset>
+    <br><br>
+
+    <fieldset id="movies">
+      <h3>Movies with rating</h3>
+   
+      <ul id='listId'>
+      </ul>
+
+    </fieldset>
+
+  </form>
+  <script src="movie.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
