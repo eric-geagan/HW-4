@@ -6,14 +6,14 @@ function formSubmitEvent() {
   let movie = document.getElementById('movieName').value
   let rating = document.getElementById('rating').value
   let review = new Movie(movie, parseInt(rating))
-  // Set fields to blank string
-  document.getElementById('movieName').value = ''
-  document.getElementById('rating').value = ''
   // Validate the object values
   let result = review.validate()
   if (result) {
     // Add object to list
     list.push(review)
+    // Set fields to blank string
+    document.getElementById('movieName').value = ''
+    document.getElementById('rating').value = ''
   } else {
     // Alert of bad values
     alert("Please fill in the fields with a valid entry.")
